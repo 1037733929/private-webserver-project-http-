@@ -52,7 +52,6 @@ int main()
 	while(1)
 	{
 		memset(strbuffer,0,sizeof(strbuffer));
-		std::cout <<"1"<<std::endl;
 		if(server.Recv(strbuffer,sizeof(strbuffer))<=0) break;
 		std::cout << "Recv OK!\n" << std::endl;
 
@@ -107,7 +106,6 @@ bool tcpserver::Accept()
 
 int tcpserver::Recv(void *buf,const int buflen)
 {
-	std::cout << "1\n" << std::endl;
 	return recv(m_clienfd,buf,buflen,0);	 
 }
 
